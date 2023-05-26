@@ -1,4 +1,5 @@
 #jogo da forca
+
 import random
 import os
 palavra = ["computador", "cachorro", "mulher", "brasil", "parede"]
