@@ -7,7 +7,7 @@
 
 import random
 lista = [False] * 3
-
+#usuario escolhe qual porta quer abrir
 while True:
     escolha_usr = int(input("Escolha uma porta: "))
     if escolha_usr in [1, 2, 3]:
@@ -25,8 +25,11 @@ print(f"O apresentador abriu a porta {porta_aberta},  atrás da qual está uma c
 #o usuário deve decidir se mantém a porta ou se muda de decisão
 decisao_final = str(input("Você deseja manter a escolha? ('S'/'N') ")).upper()
 
-escolha_final = escolha_usr
+#a partir daqui trabalharemos não mais com 'escolha_usr', mas com 'escolha_final'.
 
+#Ela tanto pode guardar o mesmo valor que antes, caso o jogador digite 'Y'...
+escolha_final = escolha_usr
+#...como pode mudar para a outra porta secreta, caso o jogador digite 'N'
 if decisao_final == 'N':
     escolha_final = random.choice([p for p in [1, 2, 3] if p != escolha_usr and p != porta_aberta])
 
@@ -34,7 +37,7 @@ print(f"\nO carro estava na porta {porta_carro}...")
 print(f"Você abriu a porta {escolha_final}...")
 
 if escolha_final == porta_carro:
-    print("Portanto você ganhou!")
+    print("Portanto você ganhou!\n")
 else:
-    print("Portanto você perdeu!")
+    print("Portanto você perdeu!\n")
 
