@@ -10,10 +10,12 @@ letras_escolhidas = []
 estado_atual = ["__"] * len(palavra)
 
 print("Seja bem vindo ao jogo da forca.")
-print("O seu objetivo é acertar a palavra secreta.")
+print("O seu objetivo é acertar a palavra secreta.\n\n")
 
 def escolherNivel():
-    print("1. Fácil\n2. Intermediário\n3.Difícil")
+    global chances
+
+    print("Estes são os níveis:\n1. Fácil\n2. Intermediário\n3.Difícil")
     while True:
         escolha = int(input("Escolha o número correspondente ao nível preferível: "))
         if escolha == 1:
@@ -64,4 +66,6 @@ def jogar():
     else:
         print("Parabéns! Você ganhou!")
         print(f"A palavra correta era {palavra}!")
+
+escolherNivel()
 jogar()
