@@ -24,8 +24,10 @@ class LinkedList():
       current = self.head
       while current:
         print(f"Matrícula: {current.matricula} - Nome: {current.nome} - Notas: {current.notas}")
-        size = len("Matrícula: " + str(current.matricula) + "- Nome: " + str(current.nome) + "- Notas: {" + str(current.notas) + "}")
+        if current.next is None:
+          size = len("Matrícula: " + str(current.matricula) + "- Nome: " + str(current.nome) + "- Notas: {" + str(current.notas) + "}")
         current = current.next
+        
     print("*"*size)
 
   def append_index(self, matricula, nome, notas, index):
