@@ -25,6 +25,7 @@ class LinkedList():
       while current:
         print(f"Matrícula: {current.matricula} - Nome: {current.nome} - Notas: {current.notas}")
         current = current.next
+    print("*"*150)
 
   def append_index(self, matricula, nome, notas, index):
     new_node = Node(matricula, nome, notas)
@@ -61,5 +62,5 @@ lista.append("32260109123", "John Lennon", [7.8, 6.4, 8.8, 7.0, 8.0])
 lista.append("19621963196", "Paul McCartney", [0.5, 0.8, 10.0, 5.0, 6.5])
 lista.append_index("40028922", "User123", [1, 2, 3, 4, 5], 1)
 lista.printList()
-lista.remove_index(1)
+lista.remove_index(3)
 lista.printList()
